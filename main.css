@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Cabin;
+  src: url(./fonts/CabinCondensed-Medium.ttf);
+  src: url(./fonts/CabinCondensed-Medium.eot);
+  src: url(./fonts/CabinCondensed-Medium.woff);
+  src: url(./fonts/CabinCondensed-Medium.woff2);
+}
+div.container {
+background: radial-gradient(circle, rgba(215,213,207,1) 21%, rgba(186,195,186,1) 43%, rgba(90,103,111,1) 72%, rgba(71,67,67,1) 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.objects {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 0 50px;
+}
+div.cards {
+  width: 30%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 80px;
+  background-color: #858585;
+  position: relative;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.77);
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.77);
+  border: 2px solid rgba(0, 0, 0, 0.678);
+}
+img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  object-position: top 0 right 30px;
+  transform: scale(1.2);
+  transition: 500ms;
+}
+div.cards:hover img {
+  object-position: top 0 left -235px;
+  transform: scale(1.5);
+}
+div.info{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+}
+div.cards:hover div.info{
+  visibility: visible;
+  opacity: 1;
+}
+ p.name {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  font-size: 30px;
+  font-family: Cabin;
+  font-weight: 600;
+}
+ p.movie {
+  position: absolute;
+  left: 25px;
+  top: 90px;
+  font-size: 25px;
+  font-family: Cabin;
+  font-weight: 400;
+  opacity: 0.8;
+  animation: fadein 500ms linear;
+
+}
+ span.movieNames {
+  position: absolute;
+  left: 25px;
+  top: 130px;
+  font-size: 20px;
+  line-height: 35px;
+  font-family: Cabin;
+  font-weight: 400;
+  opacity: 0.8;
+  animation: fadein 500ms linear;
+
+}
+ div.logos{
+  width: 40px;
+  height: 150px;
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+i{
+  color: #000000;
+  font-size: 30px !important;
+  transition: 200ms;
+  cursor: pointer;
+}
+i:hover{
+  color: #505050;
+  font-size: 35px !important;
+}
